@@ -1,0 +1,29 @@
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file: backend/.env  
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - pdf_data:/app/uploaded_pdfs
+   
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./frontend:/gui
+    environment:
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      - backend
+
+volumes:
+  pdf_data:

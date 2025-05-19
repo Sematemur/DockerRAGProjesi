@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+sunum1.py
+proje_api.py
+RAG.py
+backend/.env
+uploaded_pdfs
+.dockerignore
+.env
+cv.pdf
+.env
