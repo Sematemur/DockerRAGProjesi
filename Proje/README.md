@@ -1,0 +1,1 @@
+Bu projede backend için Docker , FastAPI ve Langchain; Arayüz için ise  Streamlit kullanıldı. 
